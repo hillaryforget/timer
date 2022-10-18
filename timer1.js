@@ -1,11 +1,10 @@
 const soundAlarm = () => {
   console.log("ALARM");
+  process.stdout.write('\u0007');
+
 };
 
-setTimeout(() => {
-  soundAlarm();
-  process.stdout.write('\x07');
-}, 3000);
+setTimeout(soundAlarm, 3000);
 
 setTimeout(soundAlarm, 5000);
 
